@@ -76,6 +76,7 @@ section {
 .text {
     flex: 14;
     margin: 1rem 0.5rem;
+    font-size: 1rem;
 }
 
 .checkbox {
@@ -98,28 +99,34 @@ form.items {
     width: 100%;
     border: none;
     background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
 }
 
 button {
-    font-size: 3rem;
-    width: 3.75rem;
-    padding: 0;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
     color: white;
-    background-color: #00ADB5;
+    font-size: 2rem;
     border: none;
-    margin: 0.5rem;
-    border-radius: 100%;
+    text-align: center;
+    background-color: #00b2b5;
 }
 
 button.Work {
-    font-size: 3rem;
-    width: 3.75rem;
-    padding: 0;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
     color: white;
-    background-color: #b56400;
+    font-size: 2rem;
     border: none;
-    margin: 0.5rem;
-    border-radius: 100%;
+    text-align: center;
+    background-color: #b56400;
 }
 
 
