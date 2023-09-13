@@ -36,7 +36,9 @@
                     <p class="card text">
                       <%=dailyToDo[i].name%>
                     </p>
-                    <input class="container checkbox" type="checkbox" name="checkbox" value="<%=locals.dailyToDo[i]._id%>" onChange="this.form.submit()">
+                    <div class="checkbox-container">
+                      <input class="checkbox" type="checkbox" name="checkbox" value="<%=locals.dailyToDo[i]._id%>" onChange="this.form.submit()">
+                    </div>
                   </div>
                   <input type="hidden" name="listName" value="<%= listTitle %>">
                 </form>
