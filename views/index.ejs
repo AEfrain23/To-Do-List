@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/styles.css">
+
+  <title>Daily To-Do-List</title>
+
+</head>
+
+<body class="<%= listTitle %>">
+  <ul id="list-links">
+    <li>
+      <a href="/work">Work Tasks</a>
+    </li>
+    <li>
+      <a href="/">Daily Tasks</a>
+    </li>
+  </ul>
+
+  <div>
+    <section>
+      <div class="content-container">
+        <h1><%= listTitle %> TO-DO-LIST</h1>
+        <div class="date">
+          <% const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" , "Saturday"] %>
+          <% const date=new Date();%>
+            <span><%=days[date.getDay()]%> <%-date.getDate();%>-</span><span><%-date.getMonth();%>-</span><span><%-date.getFullYear();%></span>
+        </div>
+        <div class="list-section">
+          <% if (locals.dailyToDo) { %>
+              <% for (i=(dailyToDo.length-1); i>= 0; i--) { %>
+                <form action="/delete" method="post">
+                  <div class="card-container">
+                    <p class="card text">
+                      <%=dailyToDo[i].name%>
+                    </p>
+                    <input class="container checkbox" type="checkbox" name="checkbox" value="<%=locals.dailyToDo[i]._id%>" onChange="this.form.submit()">
+                  </div>
+                  <input type="hidden" name="listName" value="<%= listTitle %>">
+                </form>
+                <% } %>
+                <% } %>
+        </div>
+        <form class="items" action="/" method="POST">
+          <input class="text-input" type="text" name="textInput" placeholder="Enter new item here">
+          <button class="<%=listTitle%>" type="submit" name="list" value="<%= listTitle %>">+</button>
+        </form>
+      </div>
+    </section>
+</body>
+
+</html>

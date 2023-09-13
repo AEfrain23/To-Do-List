@@ -1,0 +1,119 @@
+h1 {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    text-transform: uppercase;
+}
+
+.date {
+    margin: 15px;
+}
+
+body {
+    min-height: 100vh;
+    max-height: min-content;
+    padding: 0;
+    margin: 0;
+    background-image: -webkit-linear-gradient(65deg, #EEEEEE 50%, #AAD8D3 50%);
+}
+
+body.Work {
+    background-image: -webkit-linear-gradient(65deg, #EEEEEE 50%, #d8bcaa 50%);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+section {
+    min-height: 100vh;
+    max-height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    margin: 5rem 0;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.list-section {
+    width: 100%;
+}
+
+.card-container {
+    border: 0.5px solid black;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.text {
+    flex: 14;
+    margin: 1rem 0.5rem;
+}
+.checkbox {
+    flex: 1;
+    margin: 1rem;
+}
+
+
+form.items {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.text-input {
+    text-align: center;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+button {
+    font-size: 3rem;
+    width: 3.75rem;
+    padding: 0;
+    color: white;
+    background-color: #00ADB5;
+    border: none;
+    margin: 0.5rem;
+    border-radius: 100%;
+}
+button.Work {
+    font-size: 3rem;
+    width: 3.75rem;
+    padding: 0;
+    color: white;
+    background-color: #b56400;
+    border: none;
+    margin: 0.5rem;
+    border-radius: 100%;
+}
+
+
+#list-links {
+    position: absolute;
+    margin: 2rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.25rem;
+}
