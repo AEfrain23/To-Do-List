@@ -47,6 +47,16 @@ section {
     flex-direction: column;
     align-items: center;
 }
+@media (max-width: 786px) {
+    .content-container {
+        width: 30rem;
+    }
+}
+@media (max-width: 576px) {
+    .content-container {
+        width: 20rem;
+    }
+}
 
 
 .list-section {
@@ -67,6 +77,7 @@ section {
     flex: 14;
     margin: 1rem 0.5rem;
 }
+
 .checkbox {
     flex: 1;
     margin: 1rem;
@@ -88,6 +99,7 @@ form.items {
     border: none;
     background-color: transparent;
 }
+
 button {
     font-size: 3rem;
     width: 3.75rem;
@@ -98,6 +110,7 @@ button {
     margin: 0.5rem;
     border-radius: 100%;
 }
+
 button.Work {
     font-size: 3rem;
     width: 3.75rem;
