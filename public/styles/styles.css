@@ -64,7 +64,7 @@ section {
 }
 
 .card-container {
-    border: 0.5px solid black;
+    border: 0.75px solid black;
     border-radius: 5px;
     background-color: white;
     display: flex;
@@ -95,7 +95,7 @@ form.items {
     width: 100%;
     display: flex;
     justify-content: end;
-    border: 0.5px solid black;
+    border: 0.75px solid black;
     border-radius: 5px;
     background-color: white;
 }
