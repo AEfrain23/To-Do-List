@@ -102,7 +102,7 @@ form.items {
 }
 
 .text-input {
-    width: 35rem;
+    width: 95%;
     text-align: center;
     border: none;
     background-color: transparent;
@@ -112,7 +112,7 @@ form.items {
 
 button {
     font-size: 2rem;
-    width: 3.75rem;
+    width: 3.8rem;
     line-height: 3.5rem;
     padding: 0;
     color: white;
@@ -122,6 +122,12 @@ button {
     text-align: center;
     background-color: #00ADB5;
 }
+@media (max-width: 576px) {
+    button {
+        line-height: 3rem;
+    }
+}
+
 /* button {
     margin: 10px;
     width: 50px;
@@ -136,7 +142,7 @@ button {
 } */
 button.Work {
     font-size: 2rem;
-    width: 3.75rem;
+    width: 3.8rem;
     line-height: 3.5rem;
     padding: 0;
     color: white;
@@ -145,6 +151,11 @@ button.Work {
     border: none;
     text-align: center;
     background-color: #b56400;
+}
+@media (max-width: 576px) {
+    button.Work {
+        line-height: 3rem;
+    }
 }
 
 
