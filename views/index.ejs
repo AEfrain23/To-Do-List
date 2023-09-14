@@ -45,10 +45,12 @@
                 <% } %>
                 <% } %>
         </div>
-        <form class="items" action="/" method="POST">
-          <input class="text-input" type="text" name="textInput" placeholder="Enter new item here">
-          <button class="<%=listTitle%>" type="submit" name="list" value="<%= listTitle %>">+</button>
-        </form>
+        <div id="form-container">
+          <form class="items" action="/" method="POST">
+            <input class="text-input" type="text" name="textInput" placeholder="Enter new item here">
+            <button class="<%=listTitle%>" type="submit" name="list" value="<%= listTitle %>">+</button>
+          </form>
+        </div>
       </div>
     </section>
 </body>

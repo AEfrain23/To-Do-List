@@ -68,7 +68,6 @@ section {
     border-radius: 5px;
     background-color: white;
     display: flex;
-    width: 100%;
     text-align: center;
     margin: 1rem 0;
 }
@@ -90,19 +89,21 @@ section {
     margin: 1rem;
 }
 
+#form-container {
+    width: 100%;
+}
 
 form.items {
-    width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     border: 0.75px solid black;
     border-radius: 5px;
     background-color: white;
 }
 
 .text-input {
+    width: 35rem;
     text-align: center;
-    width: 100%;
     border: none;
     background-color: transparent;
     font-family: 'Times New Roman', Times, serif;
