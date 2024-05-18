@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/work.css">
+
+  <title>Work To-Do-List</title>
+
+</head>
+
+<body>
+    <ul id="list-links">
+        <li>
+          <a href="/work">Work Tasks</a>
+        </li>
+        <li>
+          <a href="/">Daily Tasks</a>
+        </li>
+      </ul>    
+
+  <section>
+    <div class="content-container">
+      <h1>WORK TO-DO-LIST</h1>
+      <div class="date">
+        <strong>Date:</strong>
+        <span>
+          <% const date=new Date();%>
+            <span><%-date.getDate();%>/</span><span><%-date.getMonth();%>/</span><span><%-date.getFullYear();%></span>
+        </span>
+      </div>
+      <div class="list-section">
+        <% if (locals.dailyToDo) { %>
+          <% for (i=(dailyToDo.length-1); i>= 0; i--) { %>
+            <div class="card-container">
+              <p class="card text">
+                <%=dailyToDo[i]%>
+              </p>
+              <input class="container checkbox" type="checkbox">
+            </div>
+            <% } %>
+              <% } %>
+      </div>
+          <div class="list-section">
+            <% if (locals.workToDo) { %>
+              <% for (i=(workToDo.length-1); i>= 0; i--) { %>
+            <div class="card-container">
+              <p class="card text">
+                <%=workToDo[i].name%>
+              </p>
+              <input class="container checkbox" type="checkbox">
+            </div>
+            <% } %>
+              <% } %>
+          </div>
+          <form action="/work-submit" method="POST">
+            <input class="text-input" type="text" name="textInput" placeholder="Enter new item here">
+            <input class="submit-button" type="submit" value="+">
+          </form>
+    </div>
+  </section>
+
+</body>
+
+</html>
