@@ -36,22 +36,22 @@ const item3 = new Item({
 
 const defaultItems = [item1, item2, item3];
 
-const listSchema = {
+const listSchema = new mongoose.Schema({
   name: String,
   items: [itemSchema]
-}
+});
 const List = mongoose.model("List", listSchema);
 
 
 // Using async in order to create a getItems() function and calling it later in the GET request.
 async function getItems() {
-  const items = await Item.find({}); // Remember, in order to use await you must use async.
+  const items = await Item.find({}); // Remember, in order to use await you must use async. This Finds ALL ITEMS???
   return items; // This function returns an array of all the data and we assign it the name 'Items'.
 }
 
 // Get request, Using the .then method in order to use a call back function in order to carry out the necessary steps once called.
 app.get("/", function (req, res) {
-  const customListName = req.params.customListName;
+  const customListName = req.params.customListName;   // REMEMBER: 'req.params' allows us to capture dynamic values from the URL path.
   getItems().then(function (FoundItems) {
     if (FoundItems.length === 0) {
       Item.insertMany(defaultItems);
@@ -120,7 +120,7 @@ app.post("/", (req, res) => {
 // DELETE Request. REVISE!!!!!!!!
 app.post("/delete", (req, res) => {
   const checkedItemId = req.body["checkbox"];
-  const listName = req.body["listName"]
+  const listName = req.body["listName"];
 
   if (listName === "") {
     console.log(req.body["checkbox"]);
